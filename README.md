@@ -44,9 +44,15 @@ To get a local copy up and running follow these simple example steps.
 
 👤 **Ignacio Borba**
 
-- gmail: [nachoborba@gmail.com](nachoborba@gmail.com)
+- Mail: [nachoborba@gmail.com](nachoborba@gmail.com)
 - GitHub: [@nachoborba](https://github.com/nachoborba)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/ignacio-borba-18250b170/)
+
+## Tutora de Tesis
+
+👤 **Rosario Queirolo**
+
+- Mail: [rosario.queirolo@ucu.edu.uy](rosario.queirolo@ucu.edu.uy)
 
 ## 🤝 Contributing
 
@@ -60,8 +66,8 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
+- Rosario Queirolo
+- Martín Opertti
 - etc
 
 ## 📝 License
