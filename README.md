@@ -1,6 +1,5 @@
 
-# Estigmatizados y estigmatizadores 
-### ¿Cómo estigmatizan los usuarios de marihuana a los usuarios de otras drogas?
+# Estigmatizados y estigmatizadores ### ¿Cómo estigmatizan los usuarios de marihuana a los usuarios de otras drogas?
 
 ## Abstract
 
