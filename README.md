@@ -11,7 +11,7 @@ En 2013 se legaliza el uso de cannabis en Uruguay, a raíz de esto comienza un p
 
 👤 **Ignacio Borba**
 
-- Mail: [nachoborba@gmail.com](nachoborba@gmail.com)
+- Mail: <nachoborba@gmail.com>
 - GitHub: [@nachoborba](https://github.com/nachoborba)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/ignacio-borba-18250b170/)
 
@@ -19,27 +19,21 @@ En 2013 se legaliza el uso de cannabis en Uruguay, a raíz de esto comienza un p
 
 👤 **Rosario Queirolo**
 
-- Mail: [rosario.queirolo@ucu.edu.uy](rosario.queirolo@ucu.edu.uy)
+- Mail: <rosario.queirolo@ucu.edu.uy>
 
 ## 🗄️ Sobre este repositorio
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
+Este repositorio contiene datos y códigos utilizados para mi tesis final de grado de la Licenciatura en Sociología de la Universidad Católica del Uruguay, y tiene como objetivo servir de anexo online. También se encuentran los resultados obtenidos, al igual que análisis secundarios. 
 
+Por otra parte, se ponen a disposición otros documentos como el cuestionario de la encuesta, la pauta de entrevista y el manuscrito final de la tesis.
 
-To get a local copy up and running follow these simple example steps.
+## 🔬 Métodos y Datos
 
-### Prerequisites
+### Entrevistas en profundidad
 
-### Setup
+### Índice de Estigmatización y Normalización
 
-### Install
-
-### Usage
-
-### Run tests
-
-### Deployment
+### Experimento de viñetas
 
 ## ⚒️ Herramientas utilizadas
 
