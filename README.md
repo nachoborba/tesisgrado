@@ -46,7 +46,7 @@ To get a local copy up and running follow these simple example steps.
 
 - gmail: [nachoborba@gmail.com](nachoborba@gmail.com)
 - GitHub: [@nachoborba](https://github.com/nachoborba)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/nachoborba)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/ignacio-borba-18250b170/)
 
 ## 🤝 Contributing
 
