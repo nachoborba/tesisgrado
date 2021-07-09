@@ -1,1 +1,1 @@
-# tesisgrado
+# Estigmatizados y Estigmatizadores
