@@ -41,7 +41,7 @@ To get a local copy up and running follow these simple example steps.
 
 ### Deployment
 
-## 🏗️ Built With
+## ⚒️ Herramientas utilizadas
 
 Encuesta:
 - Qualtrics
