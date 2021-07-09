@@ -52,7 +52,3 @@ To get a local copy up and running follow these simple example steps.
 - Rosario Queirolo
 - Martín Opertti
 - Equipos Consultores
-
-## 📝 License
-
-This project is [MIT](./MIT.md) licensed.
