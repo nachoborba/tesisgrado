@@ -30,6 +30,8 @@ alpha <- 0.05                                    # Standard significance level
 sims <- 1000                                     # Number of simulations to conduct for each N
 ```
 
+![screenshot](./Analisis de poder/T1.png)
+
 Para T1 - Cannabis
 
 ```{r}
