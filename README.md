@@ -29,11 +29,13 @@ Por otra parte, se ponen a disposición otros documentos como el cuestionario de
 
 ## 🔬 Métodos y Datos
 
-### Entrevistas en profundidad
-
 ### Índice de Estigmatización y Normalización
 
+Indice Palamar
+
 ### Experimento de viñetas
+
+Decir de qué se trata
 
 ## ⚒️ Herramientas utilizadas
 
