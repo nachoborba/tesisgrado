@@ -7,6 +7,20 @@ En 2013 se legaliza el uso de cannabis en Uruguay, a raíz de esto comienza un p
 
 *Palabras claves*: estigmatización, normalización, uso de drogas, marihuana, legalización.
 
+## Autor
+
+👤 **Ignacio Borba**
+
+- Mail: [nachoborba@gmail.com](nachoborba@gmail.com)
+- GitHub: [@nachoborba](https://github.com/nachoborba)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/ignacio-borba-18250b170/)
+
+## Tutora de Tesis
+
+👤 **Rosario Queirolo**
+
+- Mail: [rosario.queirolo@ucu.edu.uy](rosario.queirolo@ucu.edu.uy)
+
 ## Built With
 
 - Major languages
@@ -32,22 +46,6 @@ To get a local copy up and running follow these simple example steps.
 ### Run tests
 
 ### Deployment
-
-
-
-## Autor
-
-👤 **Ignacio Borba**
-
-- Mail: [nachoborba@gmail.com](nachoborba@gmail.com)
-- GitHub: [@nachoborba](https://github.com/nachoborba)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/ignacio-borba-18250b170/)
-
-## Tutora de Tesis
-
-👤 **Rosario Queirolo**
-
-- Mail: [rosario.queirolo@ucu.edu.uy](rosario.queirolo@ucu.edu.uy)
 
 ## 🤝 Contributing
 
