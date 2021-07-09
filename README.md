@@ -1,4 +1,3 @@
-![](https://img.shields.io/badge/R-blueviolet)
 
 # Project Name
 
