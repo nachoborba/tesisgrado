@@ -1,6 +1,8 @@
 
 # Project Name
 
+## Abstract
+
 > One paragraph statement about the project.
 
 ![screenshot](./app_screenshot.png)
@@ -12,11 +14,6 @@ Additional description about the project and its features.
 - Major languages
 - Frameworks
 - Technologies used
-
-## Live Demo
-
-[Live Demo Link](https://livedemo.com)
-
 
 ## Getting Started
 
