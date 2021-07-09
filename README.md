@@ -4,8 +4,8 @@
 ## Abstract
 
 En 2013 se legaliza el uso de marihuana en Uruguay, a raíz de esto comienza un proceso de normalización. Entendiendo como normalización un aumento en la experimentación y uso, una mayor accesibilidad a la sustancia, y adaptación social y cultural, acompañado de un cambio en las políticas públicas como es la legalización (ver Measham et al., 1994); esta investigación busca conocer cómo perciben los usuarios de cannabis a otros usuarios de drogas aún ilegales vs usuarios de drogas legales. La hipótesis que planteo propone que los usuarios de marihuana al encontrarse en la legalidad -y por lo tanto, en un proceso de normalización- estigmatizan usuarios de drogas aún ilegales, de manera similar que los de usuarios de tabaco, alcohol y no usuarios. Para dar respuesta a mí pregunta, realicé entrevistas en profundidad a usuarios y no usuarios de droga, y un experimento de viñetas para medir los diferentes niveles de estigmatización según tipo de droga. [PRINCIPALES RESULTADOS]
-Palabras claves: estigmatización, normalización, uso de drogas, marihuana, legalización.
-![image](https://user-images.githubusercontent.com/67603937/125078252-8242d180-e098-11eb-8e1e-c8d27778511b.png)
+
+*Palabras claves*: estigmatización, normalización, uso de drogas, marihuana, legalización.
 
 ## Built With
 
