@@ -24,7 +24,7 @@ power_calculator <- function(mu_t, mu_c, sigma, alpha=0.05, N){
 ```
 
 ```{r}
-possible.ns <- seq(from=100, to=5000, by=50)     # The sample sizes we'll be considering
+possible.ns <- seq(from=100, to=5000, by=100)     # The sample sizes we'll be considering
 powers <- rep(NA, length(possible.ns))           # Empty object to collect simulation estimates
 alpha <- 0.05                                    # Standard significance level
 sims <- 1000                                     # Number of simulations to conduct for each N
@@ -54,8 +54,8 @@ for (j in 1:length(possible.ns)){
   powers[j] <- mean(significant.experiments)       # store average success rate (power) for each N
 }
 
-plot(possible.ns, powers, ylim=c(0,1))
-abline(.8, 0, col="red")
+plot(possible.ns, powers, ylim=c(0,1));
+    abline(.8, 0, col="red")
 ```
 
 Para T2 - Pasta base
@@ -82,8 +82,8 @@ for (j in 1:length(possible.ns)){
   powers[j] <- mean(significant.experiments)       # store average success rate (power) for each N
 }
 
-plot(possible.ns, powers, ylim=c(0,1))
-abline(.8, 0, col="red")
+plot(possible.ns, powers, ylim=c(0,1));
+    abline(.8, 0, col="red")
 ```
 
 Para T3 - Alcohol
@@ -110,8 +110,8 @@ for (j in 1:length(possible.ns)){
   powers[j] <- mean(significant.experiments)       # store average success rate (power) for each N
 }
 
-plot(possible.ns, powers, ylim=c(0,1))
-abline(.8, 0, col="red")
+plot(possible.ns, powers, ylim=c(0,1));
+    abline(.8, 0, col="red")
 ```
 
 Para T4 - Tabaco
@@ -138,8 +138,8 @@ for (j in 1:length(possible.ns)){
   powers[j] <- mean(significant.experiments)       # store average success rate (power) for each N
 }
 
-plot(possible.ns, powers, ylim=c(0,1))
-abline(.8, 0, col="red")
+plot(possible.ns, powers, ylim=c(0,1)); 
+    abline(.8, 0, col="red")
 ```
 
 
@@ -203,8 +203,6 @@ for (j in 1:length(possible.ns)){
     Y4 <- rnorm(n=N, mean=2, sd=1)
     Z.sim <- complete_ra(N=N, num_arms=4)
     Y.sim <- Y1*(Z.sim=="T1") + Y2*(Z.sim=="T2") + Y3*(Z.sim=="T3") + Y4*(Z.sim=="T4")
-    #Y.sim[Y.sim>=5] <- 5
-    #Y.sim[Y.sim<=1] <- 1
     frame.sim <- data.frame(Y.sim, Z.sim)
     fit.T1vsT2.sim <- lm(Y.sim ~ Z.sim=="T1", data=subset(frame.sim, Z.sim!="T3" | Z.sim!="T4"))
     fit.T1vsT3.sim <- lm(Y.sim ~ Z.sim=="T1", data=subset(frame.sim, Z.sim!="T2" | Z.sim!="T4"))
@@ -239,7 +237,7 @@ for (j in 1:length(possible.ns)){
 plot(possible.ns, power.T1, ylim=c(0,1)); 
   points(possible.ns, power.T2, col="red"); 
   points(possible.ns, power.T3, col="green");
-  points(possible.ns, power.T4, col="black");
+  points(possible.ns, power.T4, col="grey");
   points(possible.ns, power.fullranking, col="blue");
   abline(.8, 0, col="red")
 ```
