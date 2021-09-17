@@ -45,6 +45,7 @@ Encuesta:
 
 Análisis de datos y simulaciones:
 - R
+- STATA
 
 Manuscrito y presentaciones:
 - LaTex
