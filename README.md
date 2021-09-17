@@ -54,5 +54,6 @@ Manuscrito y presentaciones:
 
 - Rosario Queirolo
 - Martín Opertti
+- Eliana Álvarez
 - Equipos Consultores
 
