@@ -11,7 +11,7 @@ En 2013 se legaliza el uso de cannabis en Uruguay, a raíz de esto comienza un p
 
 👤 **Ignacio Borba**
 
-- Mail: <nachoborba@gmail.com>
+- Mail: <ignacio.borba@ucu.edu.uy>
 - GitHub: [@nachoborba](https://github.com/nachoborba)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/ignacio-borba-18250b170/)
 
