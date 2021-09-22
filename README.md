@@ -35,7 +35,7 @@ Indice Palamar
 
 ### Experimento de viñetas
 
-Decir de qué se trata
+El experimento consiste en presentarle al respondiente un escenario donde debe indicar qué tan cómodo se siente frente a una persona que este consumiendo cannabis, alcohol, tabaco o pastabase. Es decir, el experimento presenta un total de 4 tratamientos.
 
 ## ⚒️ Herramientas utilizadas
 
