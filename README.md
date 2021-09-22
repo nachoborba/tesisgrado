@@ -23,7 +23,7 @@ En 2013 se legaliza el uso de cannabis en Uruguay, a raíz de esto comienza un p
 
 ## 🗄️ Sobre este repositorio
 
-Este repositorio contiene datos y códigos utilizados para mi tesis final de grado de la Licenciatura en Sociología de la Universidad Católica del Uruguay, y tiene como objetivo servir de anexo online. También se encuentran los resultados obtenidos, al igual que análisis secundarios. 
+Este repositorio contiene datos y códigos utilizados para mi tesis final de grado de la Licenciatura en Sociología por la Universidad Católica del Uruguay, y tiene como objetivo servir de anexo online. También se encuentran los resultados obtenidos, al igual que análisis secundarios. 
 
 Por otra parte, se ponen a disposición otros documentos como el cuestionario de la encuesta, la pauta de entrevista y el manuscrito final de la tesis.
 
