@@ -27,16 +27,6 @@ Este repositorio contiene datos y códigos utilizados para mi tesis final de gra
 
 Por otra parte, se ponen a disposición otros documentos como el cuestionario de la encuesta, la pauta de entrevista y el manuscrito final de la tesis.
 
-## 🔬 Métodos y Datos
-
-### Índice de Estigmatización y Normalización
-
-Indice Palamar
-
-### Experimento de viñetas
-
-El experimento consiste en presentarle al respondiente un escenario donde debe indicar qué tan cómodo se siente frente a una persona que este consumiendo cannabis, alcohol, tabaco o pastabase. Es decir, el experimento presenta un total de 4 tratamientos.
-
 ## ⚒️ Herramientas utilizadas
 
 Encuesta:
@@ -46,9 +36,6 @@ Encuesta:
 Análisis de datos y simulaciones:
 - R
 - STATA
-
-Manuscrito y presentaciones:
-- LaTex
 
 ## 🙏 Agradecimientos
 
