@@ -5,7 +5,7 @@
 * Title: Experiment
 * Author: Ignacio Borba
 * Date: 26/10/2021
-* Update: 3/11/2021
+* Update: 16/11/2021
 ***********************************************************************************************
 ***********************************************************************************************
 
@@ -32,6 +32,64 @@ sum can
 sum pbc
 sum alc
 sum tbc
+
+label variable can "Cannabis"
+label variable pbc "Pasta base"
+label variable alc "Alcohol"
+label variable tbc "Tabaco"
+
+
+gen result = .
+replace result = can if can !=.
+replace result = pbc if pbc !=.
+replace result = alc if alc !=.
+replace result = tbc if tbc !=.
+
+
+
+egen mean_can = mean(can)
+egen mean_pbc = mean(pbc)
+egen mean_alc = mean(alc)
+egen mean_tbc = mean(tbc)
+
+gen mean_treat = .
+replace mean_treat = mean_can if can != .
+replace mean_treat = mean_pbc if pbc != .
+replace mean_treat = mean_alc if alc != .
+replace mean_treat = mean_tbc if tbc != .
+
+tab mean_treat
+
+
+gen treat = .
+replace treat = 1 if can != .
+replace treat = 2 if pbc != .
+replace treat = 3 if alc != .
+replace treat = 4 if tbc != .
+
+label define treat 1 "Cannabis" 2 "Pasta base" 3 "Alcohol" 4 "Tabaco"
+label values treat treat
+
+tab treat
+
+
+egen median = median(result), by(treat)
+egen upq = pctile(result), p(75) by(treat)
+egen loq = pctile(result), p(25) by(treat)
+egen iqr = iqr(result), by(treat)
+egen upper = max(min(result, upq + 1.5 * iqr)), by(treat)
+egen lower = min(max(result, loq - 1.5 * iqr)), by(treat)
+
+
+twoway rbar median upq treat, pstyle(p1) blc(gs15) bfc(gs8) barw(0.35) || ///
+	rbar median loq treat, pstyle(p1) blc(gs15) bfc(gs8) barw(0.35) || ///
+	rspike upq upper treat, pstyle(p1) || ///
+	rspike loq lower treat, pstyle(p1) || ///
+	rcap upper upper treat, pstyle(p1) msize(*2) || ///
+	rcap lower lower treat, pstyle(p1) msize(*2) || ///
+	scatter result treat if !inrange(result, lower, upper), ms(Oh) legend(off) xla(1 "Cannabis" 2 "Pasta base" 3 "Alcohol" 4 "Tabaco", noticks) || ///
+	scatter mean_treat treat ||
+
 
 
 ***********************************************************************************************
@@ -371,13 +429,157 @@ asdoc reg tbc mujer edad region educa stigma_tbc stigma_tbc2 norm_tbc if user ==
 asdoc reg tbc mujer edad region educa stigma_tbc stigma_tbc2 norm_tbc if user == 0, nest save(models8.doc)
 
 
-
 ** CON AUTID
 
 asdoc reg can mujer edad region educa stigma_can stigma_can2 norm_can user autid_12, replace nest save(models9.doc)
 asdoc reg pbc mujer edad region educa stigma_pbc stigma_pbc2 norm_pbc user autid_12, nest save(models9.doc)
 asdoc reg alc mujer edad region educa stigma_alc stigma_alc2 norm_alc user autid_12, nest save(models9.doc)
 asdoc reg tbc mujer edad region educa stigma_tbc stigma_tbc2 norm_tbc user autid_12, nest save(models9.doc)
+
+***********************************************************************************************
+
+twoway lfit can stigma_can2 || lfit pbc stigma_pbc2 ||  lfit alc stigma_alc2 || lfit tbc stigma_tbc2, scheme(s2mono) legend(label (1 "Cannabis") label (2 "Pasta base") label (3 "Alcohol") label (4 "Tabaco")) ytitle("Nivel de incomodidad") xtitle("Nivel de estigma pœblico percibido")
+
+asdoc corr stigma_can2 can, replace save(TablaA4.doc)
+asdoc corr stigma_pbc2 pbc, save (TablaA4.doc)
+asdoc corr stigma_alc2 alc, save (TablaA4.doc)
+asdoc corr stigma_tbc2 tbc, save (TablaA4.doc)
+
+***********************************************************************************************
+
+
+mean can
+estimates store mc
+
+mean pbc
+estimates store pb
+
+mean alc
+estimates store al
+
+mean tbc
+estimates store tb
+
+coefplot mc pb al tb, vertical mlabel(cond(@pval<.001, "***", cond(@pval<.01, "**", cond(@pval<.05, "*", cond(@pval<.1, "+", ""))))) scheme(s1mono)
+
+***********************************************************************************************
+
+
+
+
+egen mean_can_usr = mean(can), by(user)
+egen mean_pbc_usr = mean(pbc), by(user)
+egen mean_alc_usr = mean(alc), by(user)
+egen mean_tbc_usr = mean(tbc), by(user)
+
+gen mean_treat_usr = .
+replace mean_treat_usr = mean_can_usr if can != .
+replace mean_treat_usr = mean_pbc_usr if pbc != .
+replace mean_treat_usr = mean_alc_usr if alc != .
+replace mean_treat_usr = mean_tbc_usr if tbc != .
+
+tab mean_treat_usr
+
+
+gen treat_usr = .
+replace treat_usr = 1 if can != . & user == 1
+replace treat_usr = 2 if can != . & user == 0
+replace treat_usr = 3 if pbc != . & user == 1
+replace treat_usr = 4 if pbc != . & user == 0
+replace treat_usr = 5 if alc != . & user == 1
+replace treat_usr = 6 if alc != . & user == 0
+replace treat_usr = 7 if tbc != . & user == 1
+replace treat_usr = 8 if tbc != . & user == 0
+
+label define treat_usr 1 "Cannabis - Usuario" 2 "Cannabis - No usuario" 3 "Pasta base - Usuario" 4 "Pasta base - No usuario" 5 "Alcohol - Usuario" 6 "Alcohol - No usuario" 7 "Tabaco - Usuario" 8 "Tabaco - No usuario"
+label values treat_usr treat_usr
+
+tab treat_usr
+
+
+
+egen median2 = median(result), by(treat_usr)
+egen upq2 = pctile(result), p(75) by(treat_usr)
+egen loq2 = pctile(result), p(25) by(treat_usr)
+egen iqr2 = iqr(result), by(treat_usr)
+egen upper2 = max(min(result, upq2 + 1.5 * iqr2)), by(treat_usr)
+egen lower2 = min(max(result, loq2 - 1.5 * iqr2)), by(treat_usr)
+
+
+twoway rbar median2 upq2 treat_usr, pstyle(p1) blc(gs15) bfc(gs8) || ///
+	rbar median2 loq2 treat_usr, pstyle(p1) blc(gs15) bfc(gs8) || ///
+	rspike upq2 upper2 treat_usr, pstyle(p1) || ///
+	rspike loq2 lower2 treat_usr, pstyle(p1) || ///
+	rcap upper2 upper2 treat_usr, pstyle(p1) msize(*2) || ///
+	rcap lower2 lower2 treat_usr, pstyle(p1) msize(*2) || ///
+	scatter result treat_usr if !inrange(result, lower2, upper2), ms(Oh) legend(off) xla(1 "Cannabis (Usr)" 2 "Cannabis (No usr)" 3 "Pasta base (Usr)" 4 "Pasta base (No usr)" 5 "Alcohol (Usr)" 6 "Alcohol (No usr)" 7 "Tabaco (Usr)" 8 "Tabaco (No usr)", noticks) || ///
+	scatter mean_treat_usr treat_usr ||
+
+	
+	
+ci can if user == 1
+ci can if user == 0
+ci pbc if user == 1
+ci pbc if user == 0
+ci alc if user == 1
+ci alc if user == 0
+ci tbc if user == 1
+ci tbc if user == 0
+
+
+mean can if user == 1
+estimates store mcanusr
+
+mean can if user == 0
+estimates store mcan
+
+mean pbc if user == 1
+estimates store mpbcusr
+
+mean pbc if user == 0
+estimates store mpbc
+
+mean alc if user == 1
+estimates store malcusr
+
+mean alc if user == 0
+estimates store malc
+
+mean tbc if user == 1
+estimates store mtbcusr
+
+mean tbc if user == 0
+estimates store mtbc
+
+
+coefplot mcanusr mcan mpbcusr mpbc malcusr malc mtbcusr mtbc, vertical mlabel(cond(@pval<.001, "***", cond(@pval<.01, "**", cond(@pval<.05, "*", cond(@pval<.1, "+", ""))))) scheme(s1mono)
+
+
+
+***********************************************************************************************
+
+
+reg can mujer edad region educa stigma_can stigma_can2 norm_can user
+estimates store can
+
+reg pbc mujer edad region educa stigma_pbc stigma_pbc2 norm_pbc user
+estimates store pbc
+
+reg alc mujer edad region educa stigma_alc stigma_alc2 norm_alc user
+estimates store alc
+
+reg tbc mujer edad region educa stigma_tbc stigma_tbc2 norm_tbc user
+estimates store tbc
+
+
+coefplot can, bylabel(Cannabis) xsc(r(-2 1)) ///
+	|| pbc, bylabel(Pasta base) xsc(r(-2 1)) ///
+	|| alc, bylabel(Alcohol) xsc(r(-2 1)) ///
+	|| tbc, bylabel(Tabaco) xsc(r(-2 1)) ///
+	||, mlabel(cond(@pval<.001, "***", cond(@pval<.01, "**", cond(@pval<.05, "*", cond(@pval<.1, "+", ""))))) xline(0) drop(_cons) scheme(s1mono) nolabels
+	
+
+
 
 ***********************************************************************************************
 

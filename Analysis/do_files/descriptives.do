@@ -4,7 +4,7 @@
 * Title: Descriptives Tesis
 * Author: Ignacio Borba
 * Date: 13/10/2021
-* Update: 19/10/2021
+* Update: 08/11/2021
 ***********************************************************************************************
 ***********************************************************************************************
 
@@ -97,6 +97,17 @@ label define user 0 "No usuario" 1 "Usuario"
 label values user user
 
 tab user
+
+
+tab educa
+
+gen educa2 = .
+replace educa2 = 1 if educa == 1 | educa == 2
+replace educa2 = 2 if educa == 3
+replace educa2 = 3 if educa == 4
+replace educa2 = 4 if educa >= 5 & educa <= 7
+
+tab educa2
 
 ***********************************************************************************************
 
